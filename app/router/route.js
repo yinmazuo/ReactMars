@@ -7,9 +7,9 @@ export default class Root extends Component {
   render() {
     return (
 	  <div>
-	  <Router history={browserHistory}>
-	    <Route path="/" component={Test} />
-	  </Router>
+  	  <Router history={browserHistory}>
+  	    <Route path="/" component={Test} />
+  	  </Router>
 	  </div>
     );
   }
