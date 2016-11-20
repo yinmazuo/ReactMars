@@ -1,4 +1,5 @@
 const webpack = require('webpack')
+const autoprefixer = require('autoprefixer')
 const path = require('path')
 const APP_PATH = path.resolve(__dirname, 'app')
 const node_modules_dir = path.resolve(__dirname, 'node_modules')
@@ -39,16 +40,24 @@ module.exports = {
       exclude: [node_modules_dir],
       loader: 'babel',
       include: APP_PATH
-    },{
+    }, {
+      test: /\.json$/,
+      loader: 'json-loader'
+    }, {
       test: /\.(scss|css)$/,
-      loaders: ['style', 'css', 'autoprefixer', 'sass'],
-    },{
+      loaders: ['style', 'css', 'postcss', 'sass'],
+    }, {
       test: /\.eot/,loader : 'file?prefix=&name=font/[name].[ext]'},
       {test: /\.woff/,loader : 'file?prefix=&limit=10000&mimetype=font/application/font-woff&name=font/[name].[ext]'},
       {test: /\.ttf/, loader : 'file?prefix=&name=font/[name].[ext]'},
       {test: /\.svg/, loader : 'file?prefix=&name=font/[name].[ext]'
     }]
   },
+  postcss: [
+    autoprefixer({
+        browsers: ['last 2 version']
+    })
+  ],
   resolve: {
     extensions: ['', '.js', '.jsx', '.json', '.css', '.scss']
   }

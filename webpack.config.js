@@ -1,6 +1,7 @@
 const path = require('path')
-const APP_PATH = path.resolve(_dirname, 'app')
+const APP_PATH = path.resolve(__dirname, 'app')
 const webpack = require('webpack')
+const autoprefixer = require('autoprefixer')
 
 module.exports = {
   devtool: 'inline-source-map',
@@ -10,7 +11,7 @@ module.exports = {
     html: './index.html'
   },
   output: {
-    path: path.resolve(_dirname, 'build'),
+    path: path.resolve(__dirname, 'build'),
     publicPath: 'http://localhost:8080/',
     filename: 'bundle.js'
   },
@@ -27,7 +28,7 @@ module.exports = {
       include: APP_PATH
     },{
       test: /\.(scss|css)$/,
-      loaders: ['style', 'css?sourceMap', 'autoprefixer', 'sass'],
+      loaders: ['style', 'css?sourceMap', 'postcss', 'sass'],
     },{
       test: /\.eot/,loader : 'file?prefix=font/'},
       {test: /\.woff/,loader : 'file?prefix=font/&limit=10000&mimetype=application/font-woff'},
@@ -35,6 +36,11 @@ module.exports = {
       {test: /\.svg/, loader : 'file?prefix=font/'
     }]
   },
+  postcss: [
+    autoprefixer({
+        browsers: ['last 2 version']
+    })
+  ],
   resolve: {
     extensions: ['', '.js', '.jsx', '.json', '.css', '.scss']
   },
