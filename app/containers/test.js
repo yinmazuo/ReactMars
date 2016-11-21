@@ -19,10 +19,11 @@ export default class Test extends Component {
     let modalProps = {
 			key: 'modal',
 			ref: (ref) => this.modal = ref,
-			type: 'info',
+			type: 'primary',
 			size: 'sm',
 			role: 'alert',
-			top: 100,
+			//top: 100,
+      //left: 100,
 			hasMask: true,
 			// onCancel: () => this.router.replace('/'),
 			// onConfirm: () => this.router.replace('/test')

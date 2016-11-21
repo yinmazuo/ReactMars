@@ -3,24 +3,26 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
   z-index: 9999;
   display: none;
   font-family: "Raleway",'Microsoft YaHei','Helvetica Neue','Helvetica','Arial','sans-serif';
+
   &.Mars-Modal-Wrap-On {
     display: flex;
+    .Mars-Modal {
+      display: flex;
+    }
   }
-
   //Modal position
   &.Mars-Modal-Vertical {
+    height: 100%;//保证高度自适应
     align-items: center;
   }
-  &.Mars-Modal-Horizontal {
-    justify-content: center;
-  }
+
   .Mars-Modal {
+    box-sizing: border-box;
     position: relative;
-    display: flex;
+    display: none;
 		flex-direction: column;
 		color: #333;
 		z-index: 1;
@@ -29,18 +31,27 @@
     left: 0;
 		border-radius: 8px;
 		background-color: #fff;
+    transition: transform .5s;
+
+    &.Mars-Modal-Horizontal {
+      margin: 0 auto;
+    }
     //Modal size
     &.Mars-Modal-lg {
-
+      font-size: 20px;
+      padding: 8px;
     }
     &.Mars-Modal-md {
-
+      font-size: 14px;
+      padding: 5px;
     }
     &.Mars-Modal-sm {
-
+      font-size: 13px;
+      padding: 4px;
     }
     &.Mars-Modal-xs {
-
+      font-size: 12px;
+      padding: 3px;
     }
     //Modal type
     &.Mars-Modal-success {

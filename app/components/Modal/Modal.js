@@ -11,6 +11,7 @@ export default class Modal extends Component {
     }
     this.enterAnimation = this.props.enterAnimation || 'zoomIn'
     this.leaveAnimation = this.props.leaveAnimation || 'zoomOut'
+
     //methods
     this.toggle = (bool) => {
       let wrap = this.wrap,
@@ -36,7 +37,7 @@ export default class Modal extends Component {
       this.toggle(false)
       setTimeout(() => {
         this.wrap.classList.remove('Mars-Modal-Wrap-On')
-      }, 300)
+      }, 500)
     }
     this.cancel = () => {
       if (this.props.onCancel) {
@@ -64,7 +65,12 @@ export default class Modal extends Component {
       }
     }
     if (size) {
-			modal.classList.add('Mars-Modal-' + size)
+      if (typeof size === 'string') {
+        modal.classList.add('Mars-Modal-' + size)
+      }
+      if (typeof size === 'number') {
+        modal.style.fontSize = size + 'px';
+      }
 		}
     if (type) {
       modal.classList.add('Mars-Modal-' + type)
@@ -77,7 +83,7 @@ export default class Modal extends Component {
     if (left) {
       modal.style.left = typeof left === 'number' ? left + 'px' : left
     } else {
-      wrap.classList.add('Mars-Modal-Horizontal')
+      modal.classList.add('Mars-Modal-Horizontal')
     }
     if (width) {
       modal.style.width = typeof width === 'number' ? width + 'px' : width
