@@ -1,0 +1,77 @@
+[class^='Mars-Btn-'] {
+  box-sizing: border-box;
+  cursor: pointer;
+  border-image: none;
+  border: 1px solid #adadad;
+  background-color: #e6e6e6;
+  vertical-align: middle;
+  white-space: nowrap;
+  opacity: 0.9;
+  font-family: 'Microsoft YaHei','Helvetica Neue','Helvetica','Arial','sans-serif';
+
+  //Button size
+  &.Mars-Btn-lg {
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 5px 10px;
+    line-height: 1.3333;
+  }
+  &.Mars-Btn-sm {
+    border-radius: 4px;
+    font-size: 14px;
+    padding: 3px 6px;
+    line-height: 1.5;
+  }
+  &.Mars-Btn-xs {
+    border-radius: 3px;
+    font-size: 12px;
+    padding: 1px 3px;
+    line-height: 1.5;
+  }
+  &:not([disabled]):hover {
+    opacity: 1;
+  }
+  &:active {
+    opacity: 1;
+    outline-offset: -2px;
+    outline-width: 1px;
+    outline-color: #000;
+    outline-style: dotted;
+  }
+}
+[class^='Mars-Btn-'][disabled] {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+//Button styleType
+.Mars-Btn-default {
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #e6e6e6;
+}
+.Mars-Btn-success {
+  color: #fff;
+  background-color: #3c763d;
+  border-color: #3c763d;
+}
+.Mars-Btn-warning {
+  color: #fff;
+  background-color: #8a6d3b;
+  border-color: #8a6d3b;
+}
+.Mars-Btn-error {
+  color: #fff;
+  background-color: #a94442;
+  border-color: #a94442;
+}
+.Mars-Btn-info {
+  color: #fff;
+  background-color: #31708f;
+  border-color: #31708f;
+}
+.Mars-Btn-primary {
+  color: #fff;
+  background-color: #3071a9;
+  border-color: #3071a9;
+}

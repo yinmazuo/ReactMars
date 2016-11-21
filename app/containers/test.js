@@ -4,15 +4,18 @@ import React, { Component, PropTypes } from 'react'
 // import { bindActionCreators } from 'redux'
 import '../style/index.scss'
 import Modal from '../components/Modal'
+import Button from '../components/Button'
 
 
 export default class Test extends Component {
   constructor(props) {
     super(props)
-    this.showModal = this.showModal.bind(this)
-  }
-  showModal() {
-    this.modal.open()
+    this.showModal = () => {
+      this.modal.open()
+    }
+    this.closeModal = () => {
+      this.modal.close()
+    }
   }
 
   render() {
@@ -39,7 +42,7 @@ export default class Test extends Component {
             <p>内容</p>
           </Modal.Body>
           <Modal.Footer>
-            <p>底部</p>
+            <Button size='lg' onClick={this.closeModal}>Confirm</Button>
           </Modal.Footer>
 				</Modal>
       </div>
