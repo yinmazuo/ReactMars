@@ -42,7 +42,7 @@ export default class Test extends Component {
             <p>内容</p>
           </Modal.Body>
           <Modal.Footer>
-            <Button size='lg' onClick={this.closeModal}>Confirm</Button>
+            <Button size='sm' styleType='info'>Confirm</Button>
           </Modal.Footer>
 				</Modal>
       </div>

@@ -14,7 +14,7 @@ export default class Button extends Component {
       }
       if (this.props.one) {
         this.setState({
-          display: true
+          disabled: true
         })
       }
     }
