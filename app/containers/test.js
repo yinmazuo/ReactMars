@@ -5,6 +5,7 @@ import React, { Component, PropTypes } from 'react'
 import '../style/index.scss'
 import Modal from '../components/Modal'
 import Button from '../components/Button'
+import Icon from '../components/Icon'
 
 
 export default class Test extends Component {
@@ -42,7 +43,9 @@ export default class Test extends Component {
             <p>内容</p>
           </Modal.Body>
           <Modal.Footer>
-            <Button size='sm' styleType='info'>Confirm</Button>
+            <Button size='sm' styleType='info'>
+              <Icon name={'shield'} rotate={180} style={{color: '#fff'}}></Icon>
+            </Button>
           </Modal.Footer>
 				</Modal>
       </div>
