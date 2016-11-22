@@ -44,7 +44,7 @@ export default class Icon extends Component {
 }
 
 Icon.PropTypes = {
-  name: PropTypes.string,
+  name: PropTypes.string.isRequired,
   size: PropTypes.oneOfType([
     PropTypes.number,
     PropTypes.string
