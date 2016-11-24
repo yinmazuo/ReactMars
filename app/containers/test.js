@@ -1,7 +1,9 @@
 import React, { Component, PropTypes } from 'react'
-// import { Link, IndexLink } from 'react-router'
-// import { connect } from 'react-redux'
-// import { bindActionCreators } from 'redux'
+import { Link, IndexLink } from 'react-router'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+
+import TestActions from '../actions/TestAction';
 import '../style/index.scss'
 import Modal from '../components/Modal'
 import Button from '../components/Button'
@@ -52,6 +54,17 @@ export default class Test extends Component {
     )
   }
 }
+
+const mapStateToProps = (state) => {
+	return {store: state.test};
+};
+
+const mapDispatchToProps = (dispatch) => ({
+	actions: bindActionCreators(TestActions, dispatch)
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Test);
+
 Test.propTypes = {
   children: PropTypes.any
 };

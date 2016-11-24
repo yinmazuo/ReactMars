@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 
+import DevTools from '../DevTools';
 import Test from '../containers/test';
 
 export default class Root extends Component {
@@ -10,6 +11,7 @@ export default class Root extends Component {
   	  <Router history={browserHistory}>
   	    <Route path="/" component={Test} />
   	  </Router>
+      <DevTools />
 	  </div>
     );
   }
