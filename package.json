@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack-dev-server --devtool eval --progress --colors --hot --content-base",
+    "dev": "webpack-dev-server --devtool eval --progress --colors --hot --open --content-base",
     "deploy": "set NODE_ENV=production && webpack --progress --colors --config webpack.config.prod.js"
   },
   "repository": {
@@ -26,7 +26,6 @@
     "fetch": "^1.1.0",
     "font-awesome": "^4.7.0",
     "react": "^15.4.0",
-    "react-addons-css-transition-group": "^15.4.0",
     "react-dom": "^15.4.0",
     "react-redux": "^4.4.6",
     "react-router": "^3.0.0",
