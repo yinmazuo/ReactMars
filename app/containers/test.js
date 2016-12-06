@@ -8,9 +8,10 @@ import '../style/index.scss'
 import Modal from '../components/Modal'
 import Button from '../components/Button'
 import Icon from '../components/Icon'
+import Dropdown from '../components/Dropdown'
 
 
-export default class Test extends Component {
+class Test extends Component {
   constructor(props) {
     super(props)
     this.showModal = () => {
@@ -50,6 +51,7 @@ export default class Test extends Component {
             </Button>
           </Modal.Footer>
 				</Modal>
+        <Dropdown styleType={'primary'} items={['test 1', 'test 2', 'test 3']} />
       </div>
     )
   }

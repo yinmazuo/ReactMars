@@ -1,4 +1,4 @@
-import * as ActionTypes from '../constants/SidebarActionType';
+import * as ActionTypes from '../constants/TestActionType';
 
 const initialState = {
     show: true

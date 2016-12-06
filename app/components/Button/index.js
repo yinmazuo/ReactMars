@@ -25,7 +25,8 @@ export default class Button extends Component {
         prefix = 'Mars-Btn-',
         { size, styleType } = this.props
 
-    !styleType ? 'default' : void 0
+    !size ? size = 'sm' : void 0
+    !styleType ? styleType = 'default' : void 0
     classNames += (prefix + size) + ' ' + (prefix + styleType)
     return (
       <button
