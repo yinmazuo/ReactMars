@@ -23,7 +23,6 @@
   },
   "homepage": "https://github.com/yinmazuo/ReactMars#readme",
   "dependencies": {
-    "fetch": "^1.1.0",
     "font-awesome": "^4.7.0",
     "react": "^15.4.0",
     "react-dom": "^15.4.0",
@@ -33,7 +32,7 @@
     "redux-devtools": "^3.3.1",
     "redux-promise-middleware": "^4.1.0",
     "redux-thunk": "^2.1.0",
-    "whatwg-fetch": "^2.0.0"
+    "whatwg-fetch": "^2.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^6.5.3",

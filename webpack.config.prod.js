@@ -7,9 +7,8 @@ const node_modules_dir = path.resolve(__dirname, 'node_modules')
 module.exports = {
   devtool: false,
   context: APP_PATH,
-  entry: {
-    main: ['babel-polyfill', './index.js'],
-    html: './index.html'
+  entry:{
+    main: ['babel-polyfill', './index.js']
   },
   output: {
     path: path.resolve(__dirname, 'dist'),

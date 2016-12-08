@@ -48,6 +48,26 @@ module.exports = {
     historyApiFallback: true,
     hot: true,
     inline: true,
-    progress: true
+    progress: true,
+    proxy: {
+      '/zhihu': {
+          target: 'http://news-at.zhihu.com',
+          pathRewrite: {'^/zhihu' : '/'},
+          changeOrigin: true,
+          secure: false
+      },
+      '/v2ex': {
+        target: 'https://www.v2ex.com',
+        pathRewrite: {'^/v2ex' : '/'},
+        changeOrigin: true,
+        secure: false
+      },
+      '/juejin': {
+        target: 'https://gold.xitu.io',
+        pathRewrite: {'^/juejin' : '/'},
+        changeOrigin: true,
+        secure: false
+      }
+    }
   }
 }

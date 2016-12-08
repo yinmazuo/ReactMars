@@ -1,0 +1,22 @@
+
+.wrapper {
+  .main {
+    position: relative;
+    box-sizing: border-box;
+    width: 80%;
+    margin: 0 auto;
+    padding-left: 180px;
+    .Sidebar {
+      position: relative;
+      float: left;
+      margin-left: -180px;
+    }
+    .content {
+      box-sizing: border-box;
+      height: 600px;
+      overflow: scroll;
+      width: 100%;
+      min-height: 200px;
+    }
+  }
+}

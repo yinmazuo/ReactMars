@@ -1,17 +1,23 @@
-import React, { Component } from 'react';
-import { Router, Route, IndexRoute, browserHistory } from 'react-router';
+import React, { Component } from 'react'
+import { Router, Route, IndexRoute, browserHistory } from 'react-router'
 
-import DevTools from '../DevTools';
-import Test from '../containers/test';
+//import DevTools from '../DevTools'
+import App from '../containers/app'
+import ZhihuNewsC from '../containers/ZhihuNewsC'
+import V2EXC from '../containers/V2EXC'
 
 export default class Root extends Component {
   render() {
     return (
 	  <div>
   	  <Router history={browserHistory}>
-  	    <Route path="/" component={Test} />
+  	    <Route path="/" component={App} >
+          <IndexRoute component={ZhihuNewsC}/>
+          <Route path="ZhihuNews" component={ZhihuNewsC} />
+          <Route path="V2EX" component={V2EXC} />
+        </Route>
   	  </Router>
-      <DevTools />
+      {/*<DevTools />*/}
 	  </div>
     );
   }

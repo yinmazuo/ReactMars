@@ -1,0 +1,25 @@
+@import '../../style/default.scss';
+
+.Sidebar {
+  width: 160px;
+  background-color: $main-bgc;
+  .link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    float: left;
+    height: 40px;
+    width: 100%;
+    text-decoration: none;
+    color: #333;
+    &:hover {
+      background-color: $main-color;
+      color: #fff;
+    }
+    img {
+      width: 32px;
+      height: 32px;
+    }
+  }
+}

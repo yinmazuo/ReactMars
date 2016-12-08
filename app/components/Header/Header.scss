@@ -1,0 +1,24 @@
+@import '../../style/default.scss';
+
+.Header {
+  width: 100%;
+  height: 40px;
+  padding: 10px 20px;
+  color: $main-color;
+  background-color: $main-bgc;
+  margin-bottom: 20px;
+  .wrpper {
+    width: 80%;
+    margin: 0 auto;
+  }
+  h2 {
+    width: 100px;
+    float: left;
+    line-height: 40px;
+  }
+  span {
+    width: 300px;
+    float: left;
+    line-height: 40px;
+  }
+}
