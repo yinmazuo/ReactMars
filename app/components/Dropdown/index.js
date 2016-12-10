@@ -18,10 +18,15 @@ export default class Dropdown extends Component {
         this.setState({display: true})
       }
     }
-    this.changeValue = (v) => {
+    this.changeValue = (v, i) => {    
       return () => {
-        this.setState({value: v})
         this.toggleMenu()
+        if (v === this.state.value) {
+          return false
+        } else {
+          this.setState({value: v})
+          this.props.changeHandle(i)
+        }
       }
     }
   }
@@ -35,7 +40,7 @@ export default class Dropdown extends Component {
               {...this.props}>
               {this.state.value}
               <Icon ref={(ref) => this.icon = ref}
-                    style={{marginLeft: '12px', marginRight: '6px', color: '#ccc'}}
+                    style={{marginLeft: '12px', marginRight: '6px', color: '#999'}}
                     name={'caret-' + (this.state.display ? 'up' : 'down')} />
         </Button>
         <div className='Dropdown-Menu'
@@ -44,7 +49,7 @@ export default class Dropdown extends Component {
           {this.props.items.map((itemContent, index) => (
             <div className='Dropdown-Item'
                  key={index}
-                 onClick={this.changeValue(itemContent)}>
+                 onClick={this.changeValue(itemContent, index)}>
               {itemContent}
             </div>
           ))}

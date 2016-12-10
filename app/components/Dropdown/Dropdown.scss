@@ -1,10 +1,10 @@
 .Dropdown {
   position: relative;
   color: #333;
-
+  z-index: 9999;
   .Dropdown-Menu {
     position: absolute;
-    margin-top: 5px;
+    background-color: #fff;
 
     .Dropdown-Item {
       position: relative;

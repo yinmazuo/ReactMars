@@ -12,9 +12,9 @@ export default class Root extends Component {
 	  <div>
   	  <Router history={browserHistory}>
   	    <Route path="/" component={App} >
-          <IndexRoute component={ZhihuNewsC}/>
-          <Route path="ZhihuNews" component={ZhihuNewsC} />
+          <IndexRoute component={V2EXC}/>
           <Route path="V2EX" component={V2EXC} />
+          <Route path="ZhihuNews" component={ZhihuNewsC} />
         </Route>
   	  </Router>
       {/*<DevTools />*/}

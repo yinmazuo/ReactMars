@@ -11,12 +11,12 @@ export default class App extends Component {
         <Header />
         <div className='main'>
           <Sidebar items={[
-                            {location: 'ZhihuNews', text: '知乎日报'},
                             {location: 'V2EX', text: 'V2EX'},
+                            {location: 'ZhihuNews', text: '知乎日报'},                        
                             {location: 'Juejin', text: '掘金'},
                             {location: 'Github', text: 'Github'},
                             {location: 'CSDN', text: 'CSDN'},
-                            {location: 'ITHome', text: 'IT之家'},                          
+                            {location: 'ITHome', text: 'IT之家'},
                           ]}/>
           <div className='content'>
             {this.props.children}

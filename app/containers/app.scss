@@ -14,8 +14,8 @@
     .content {
       box-sizing: border-box;
       height: 600px;
-      overflow: scroll;
       width: 100%;
+      overflow: hidden;
       min-height: 200px;
     }
   }
