@@ -8,7 +8,7 @@ module.exports = {
   context: APP_PATH,
   entry: {
     main: ['babel-polyfill', './index.js'],
-    html: './index.html'
+    html: ['./index.html']
   },
   output: {
     path: path.resolve(__dirname, 'build'),
