@@ -1,5 +1,7 @@
 # ReactMars
 Study React &amp;&amp; Create my own React UI
+## Demo
+![Demo](https://github.com/yinmazuo/ReactMars/blob/master/screenshot/ReactMars-Demo.gif)
 
 ## Getting Started
 ```
